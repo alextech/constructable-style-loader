@@ -1,6 +1,10 @@
+import style from './style.css';
+
 class Panel extends HTMLElement {
     constructor() {
         super();
+
+        const s = style;
 
         this.attachShadow({mode: "open"});
         this.shadowRoot.innerHTML = `<div class="panel">Panel CMP</div>`;
