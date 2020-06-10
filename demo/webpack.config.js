@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        demo: './demo/index.js',
+        demo: './src/index.js',
     },
     output: {
         filename: '[name].bundle.js',
@@ -16,10 +16,9 @@ module.exports = {
         port: 9000
     },
     resolveLoader: {
-        modules: [
-            'node_modules',
-            path.resolve(__dirname, 'loaders')
-        ]
+        alias: {
+            'constructable-style-loader': path.resolve(__dirname, '../src/index.js')
+        }
     },
     plugins: [
     ],
@@ -29,7 +28,7 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     {
-                        loader: 'constructable-loader',
+                        loader: 'constructable-style-loader',
                         options: {/* ... */}
                     }
                 ]

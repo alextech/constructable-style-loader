@@ -1,29 +1,28 @@
 {
-  "name": "constructable-loader",
+  "name": "constructable-style-loader",
   "version": "1.0.0-alpha.0",
-  "description": "Loading only needed part of a given CSS library into web component as a constructable stylesheet.",
-  "main": "index.js",
+  "description": "Loading only needed selectors of a given CSS library into web component as a constructable stylesheet.",
+  "license": "ISC",
+  "author": "Alexander Romanenko",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --hot"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "constructable",
-    "stylesheet",
-    "web",
-    "components",
+    "constructable-stylesheet",
+    "web-components",
     "css"
   ],
-  "author": "Alexander Romanenko",
-  "license": "ISC",
-  "devDependencies": {
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
-  },
+  "files": [
+    "src"
+  ],
+  "devDependencies": {},
   "dependencies": {
     "postcss": "^7.0.32",
     "purgecss": "^2.2.1",
     "webpack": "^4.43.0"
+  },
+  "peerDependencies": {
+    "webpack": "*"
   }
 }
