@@ -21,12 +21,12 @@
     "@babel/preset-env": "^7.10.2",
     "babel-jest": "^26.0.1",
     "jest": "^26.0.1",
-    "memfs": "^3.2.0"
+    "memfs": "^3.2.0",
+    "webpack": "^4.43.0"
   },
   "dependencies": {
     "postcss": "^7.0.32",
-    "purgecss": "^2.2.1",
-    "webpack": "^4.43.0"
+    "purgecss": "^2.2.1"
   },
   "peerDependencies": {
     "webpack": "*"
