@@ -1,4 +1,4 @@
-#constructable-style-loader
+# constructable-style-loader
 
 Inject CSS directly into a DOM element as a [`constructable stylesheet`](https://developers.google.com/web/updates/2019/02/constructable-stylesheets).
 
