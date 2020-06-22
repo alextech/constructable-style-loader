@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`loader should work: module 1`] = `
-"const styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`.panel {
-    background-color: orange;
-    border-style: solid;
-}\`); export default styleSheet;"
-`;

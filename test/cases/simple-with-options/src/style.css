@@ -6,3 +6,7 @@
     background-color: orange;
     border-style: solid;
 }
+
+.white-listed {
+    background-color: white;
+}

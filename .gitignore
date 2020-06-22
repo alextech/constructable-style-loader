@@ -1,3 +1,4 @@
 .idea
 node_modules
-dist/demo.bundle.js
+demo/dist/demo.bundle.js
+test/webpack_bundle

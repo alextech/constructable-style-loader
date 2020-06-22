@@ -3,21 +3,24 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     entry: {
-        demo: './src/index.js',
+        unit_test: './src/index.js',
     },
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        port: 9000
-    },
+    // output: {}, configured at webpackCases.test.js,
     resolveLoader: {
         alias: {
-            'constructable-style-loader': path.resolve(__dirname, '../src/index.js')
+            'constructable-style-loader': path.resolve(__dirname, '../../../src/index.js')
+        }
+    },
+    optimization: {
+        runtimeChunk: 'single',
+        splitChunks: {
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all'
+                }
+            }
         }
     },
     plugins: [
