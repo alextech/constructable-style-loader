@@ -1,12 +1,10 @@
 # constructable-style-loader
 
-Inject CSS directly into a DOM element as a [`constructable stylesheet`](https://developers.google.com/web/updates/2019/02/constructable-stylesheets).
+Apply CSS directly to a DOM element as a [`constructable stylesheet`](https://developers.google.com/web/updates/2019/02/constructable-stylesheets).
+Constructable-style-loader creates `CSSStyleSheetObject` JavaScript object, which can be adopted to an element using `adoptedStyleSheets` setter.
 
-Creates `CSSStyleSheetObject` JavaScript object from **purged CSS source**, which can be adopted to an element using `adoptedStyleSheets` setter.
-CSS is purged with `purgeCSS` specifically for the file it is being loaded in, so only relevant part of the CSS library is applied.
-This is especially useful for web components, where the scope of parent document style does not reach its DOM tree
- while every instance of the component should not have a copy of the whole style with selectors it does not need.
- 
+It can be optionally chained with postcss-loader when need to use output from other CSS preprocessors.
+
 ## Getting Started
 
 To begin, install `constructable-style-loader`:
@@ -60,3 +58,41 @@ module.exports = {
   },
 };
 ```
+
+## Optional usage with purgecss
+
+Loader options accept object that will be passed to purgecss plugin (assuming it is installed), if `{purge: true}` property is present.
+
+ **webpack.config.js**
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+            {
+                loader: 'constructable-style-loader',
+                options: {
+                    purge: true,
+                    content: ['**/*.js'],
+                    whitelist: ['white-listed']
+                }
+            },
+        ]
+      },
+    ],
+  },
+};
+```
+
+If `constructable-style-loader` is chained after `purgecss-loader`, in this case purgecss will be given AST root from PostCSS
+to avoid duplicate parsing of CSS string.
+
+### Note about performance
+
+In case of web components, creating a separate CSS tree per component ended up being unnecessary.
+Browser does not appear to be duplicating CSS tree in every place where it is applied the way inserting <style> tag in every shadow root would, but only points to it.
+On the contrary, having separate CSS tree per component only expanded bundle size.
+Could potentially investigate if there are any performance wins if CSSStyleSheetObjects are created at runtime, not compile time.

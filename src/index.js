@@ -1,22 +1,39 @@
-const PurgeCSS = require('purgecss');
 const loaderUtils = require('loader-utils');
 
-module.exports = async function (cssSource) {
-    const requestComponent = this._module.issuer.request;
+module.exports = async function (request, map, meta) {
+    const options = loaderUtils.getOptions(this);
 
-    const options = {
-        ...PurgeCSS.defaultOptions,
-        ...loaderUtils.getOptions(this),
-    };
+    if (options.hasOwnProperty("purge") && options.purge === true) {
+        const PurgeCSS = require('purgecss');
 
-    const purgeCSS = new PurgeCSS.PurgeCSS();
-    purgeCSS.options = options;
+        const options = {
+            ...PurgeCSS.defaultOptions,
+            ...loaderUtils.getOptions(this),
+        }
 
-    const { extractors } = options;
+        const purgeCSS = new PurgeCSS.PurgeCSS();
+        purgeCSS.options = options;
 
-    const selectors = await purgeCSS.extractSelectorsFromFiles([requestComponent], extractors);
+        const { content, extractors } = options;
 
-    const purgedCSS = await purgeCSS.getPurgedCSS([{raw:cssSource}], selectors);
+        const fileFormatContents = content.filter(
+            (o) => typeof o === "string"
+        ) /* as string[] */;
 
-    return `const styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`${purgedCSS[0].css}\`); export default styleSheet;`;
+        const selectors = await purgeCSS.extractSelectorsFromFiles(fileFormatContents, extractors);
+
+        if (meta &&
+            meta.ast &&
+            meta.ast.type === 'postcss') {
+
+            const {ast} = meta;
+            await purgeCSS.walkThroughCSS(ast.root, selectors);
+
+            request = ast.root.toString();
+        } else {
+            request = (await purgeCSS.getPurgedCSS([{raw:request}], selectors))[0].css;
+        }
+    }
+
+    return `const styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`${request}\`); export default styleSheet;`;
 }

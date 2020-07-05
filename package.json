@@ -26,11 +26,13 @@
     "rimraf": "^3.0.2",
     "webpack": "^4.43.0"
   },
-  "dependencies": {
-    "postcss": "^7.0.32",
+  "optionalDependencies": {
     "purgecss": "^2.2.1"
   },
   "peerDependencies": {
     "webpack": "*"
+  },
+  "dependencies": {
+    "postcss-loader": "^3.0.0"
   }
 }

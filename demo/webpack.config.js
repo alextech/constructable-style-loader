@@ -32,7 +32,8 @@ module.exports = {
                         options: {
                             whitelist: ['white-listed']
                         }
-                    }
+                    },
+                    'postcss-loader'
                 ]
             }
         ]

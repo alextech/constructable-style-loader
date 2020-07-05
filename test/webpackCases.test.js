@@ -25,7 +25,9 @@ async function readFileOrEmpty(path/*: string*/) /*: Promise<string>*/ {
 }
 
 const cases = [
-    "simple-with-options"
+    'simple',
+    'simple-with-purge',
+    'multiple-with-postcss-loader'
 ];
 
 describe("Webpack integration", () => {

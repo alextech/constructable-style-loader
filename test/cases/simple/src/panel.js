@@ -6,7 +6,7 @@ class Panel extends HTMLElement {
 
         this.attachShadow({mode: "open"});
         this.shadowRoot.innerHTML = `<div class="panel">Panel CMP</div>`;
-        this.shadowRoot.adoptedStyleSheets = [style];
+        this.shadowRoot.adoptedStyleSheets = [style]
     }
 }
 

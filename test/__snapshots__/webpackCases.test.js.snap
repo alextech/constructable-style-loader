@@ -1,6 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Webpack integration works with simple-with-options configuration: simple-with-options 1`] = `
+exports[`Webpack integration works with multiple-with-postcss-loader configuration: multiple-with-postcss-loader 1`] = `
+"(window[\\"webpackJsonp\\"] = window[\\"webpackJsonp\\"] || []).push([[\\"unit_test\\"],{
+
+/***/ \\"./src/form.js\\":
+/*!*********************!*\\\\
+  !*** ./src/form.js ***!
+  \\\\*********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+\\"use strict\\";
+eval(\\"__webpack_require__.r(__webpack_exports__);\\\\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \\\\\\"./src/style.css\\\\\\");\\\\n\\\\r\\\\n\\\\r\\\\nclass Form extends HTMLElement {\\\\r\\\\n    constructor() {\\\\r\\\\n        super();\\\\r\\\\n\\\\r\\\\n        this.attachShadow({mode: \\\\\\"open\\\\\\"});\\\\r\\\\n        this.shadowRoot.innerHTML = \`<div class=\\\\\\"form\\\\\\"><form>Form CMP</form></div>\`;\\\\r\\\\n        this.shadowRoot.adoptedStyleSheets = [_style_css__WEBPACK_IMPORTED_MODULE_0__[\\\\\\"default\\\\\\"]]\\\\r\\\\n    }\\\\r\\\\n}\\\\r\\\\n\\\\r\\\\nif (customElements.get('ata-panel') == null) {\\\\r\\\\n    customElements.define('ata-panel', Form);\\\\r\\\\n}\\\\r\\\\n\\\\n\\\\n//# sourceURL=webpack:///./src/form.js?\\");
+
+/***/ }),
+
+/***/ \\"./src/index.js\\":
+/*!**********************!*\\\\
+  !*** ./src/index.js ***!
+  \\\\**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+\\"use strict\\";
+eval(\\"__webpack_require__.r(__webpack_exports__);\\\\n/* harmony import */ var _panel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./panel */ \\\\\\"./src/panel.js\\\\\\");\\\\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form */ \\\\\\"./src/form.js\\\\\\");\\\\n\\\\r\\\\n\\\\n\\\\n//# sourceURL=webpack:///./src/index.js?\\");
+
+/***/ }),
+
+/***/ \\"./src/panel.js\\":
+/*!**********************!*\\\\
+  !*** ./src/panel.js ***!
+  \\\\**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+\\"use strict\\";
+eval(\\"__webpack_require__.r(__webpack_exports__);\\\\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \\\\\\"./src/style.css\\\\\\");\\\\n\\\\r\\\\n\\\\r\\\\nclass Panel extends HTMLElement {\\\\r\\\\n    constructor() {\\\\r\\\\n        super();\\\\r\\\\n\\\\r\\\\n        this.attachShadow({mode: \\\\\\"open\\\\\\"});\\\\r\\\\n        this.shadowRoot.innerHTML = \`<div class=\\\\\\"panel\\\\\\">Panel CMP</div>\`;\\\\r\\\\n        this.shadowRoot.adoptedStyleSheets = [_style_css__WEBPACK_IMPORTED_MODULE_0__[\\\\\\"default\\\\\\"]]\\\\r\\\\n    }\\\\r\\\\n}\\\\r\\\\n\\\\r\\\\nif (customElements.get('ata-form') == null) {\\\\r\\\\n    customElements.define('ata-form', Panel);\\\\r\\\\n}\\\\r\\\\n\\\\n\\\\n//# sourceURL=webpack:///./src/panel.js?\\");
+
+/***/ }),
+
+/***/ \\"./src/style.css\\":
+/*!***********************!*\\\\
+  !*** ./src/style.css ***!
+  \\\\***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+\\"use strict\\";
+eval(\\"__webpack_require__.r(__webpack_exports__);\\\\nconst styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`.panel {\\\\r\\\\n    background-color: orange;\\\\r\\\\n    border-style: solid;\\\\r\\\\n}\\\\r\\\\n\\\\r\\\\n.white-listed {\\\\r\\\\n    background-color: white;\\\\r\\\\n}\\\\r\\\\n\\\\r\\\\nform {\\\\r\\\\n    padding-left: 1em;\\\\r\\\\n}\\\\r\\\\n\`); /* harmony default export */ __webpack_exports__[\\\\\\"default\\\\\\"] = (styleSheet);\\\\n\\\\n//# sourceURL=webpack:///./src/style.css?\\");
+
+/***/ })
+
+},[[\\"./src/index.js\\",\\"runtime\\"]]]);"
+`;
+
+exports[`Webpack integration works with simple configuration: simple 1`] = `
 "(window[\\"webpackJsonp\\"] = window[\\"webpackJsonp\\"] || []).push([[\\"unit_test\\"],{
 
 /***/ \\"./src/index.js\\":
@@ -35,7 +89,49 @@ eval(\\"__webpack_require__.r(__webpack_exports__);\\\\n/* harmony import */ var
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 \\"use strict\\";
-eval(\\"__webpack_require__.r(__webpack_exports__);\\\\nconst styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`.panel {\\\\r\\\\n    background-color: orange;\\\\r\\\\n    border-style: solid;\\\\r\\\\n}\\\\r\\\\n\\\\r\\\\n.white-listed {\\\\r\\\\n    background-color: white;\\\\r\\\\n}\\\\r\\\\n\`); /* harmony default export */ __webpack_exports__[\\\\\\"default\\\\\\"] = (styleSheet);\\\\n\\\\n//# sourceURL=webpack:///./src/style.css?\\");
+eval(\\"__webpack_require__.r(__webpack_exports__);\\\\nconst styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`.btn {\\\\r\\\\n    background-color: blue;\\\\r\\\\n}\\\\r\\\\n\\\\r\\\\n.panel {\\\\r\\\\n    background-color: orange;\\\\r\\\\n    border-style: solid;\\\\r\\\\n}\\\\r\\\\n\\\\r\\\\n.white-listed {\\\\r\\\\n    background-color: white;\\\\r\\\\n}\\\\r\\\\n\`); /* harmony default export */ __webpack_exports__[\\\\\\"default\\\\\\"] = (styleSheet);\\\\n\\\\n//# sourceURL=webpack:///./src/style.css?\\");
+
+/***/ })
+
+},[[\\"./src/index.js\\",\\"runtime\\"]]]);"
+`;
+
+exports[`Webpack integration works with simple-with-purge configuration: simple-with-purge 1`] = `
+"(window[\\"webpackJsonp\\"] = window[\\"webpackJsonp\\"] || []).push([[\\"unit_test\\"],{
+
+/***/ \\"./src/index.js\\":
+/*!**********************!*\\\\
+  !*** ./src/index.js ***!
+  \\\\**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+\\"use strict\\";
+eval(\\"__webpack_require__.r(__webpack_exports__);\\\\n/* harmony import */ var _panel_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./panel.js */ \\\\\\"./src/panel.js\\\\\\");\\\\n\\\\n\\\\n//# sourceURL=webpack:///./src/index.js?\\");
+
+/***/ }),
+
+/***/ \\"./src/panel.js\\":
+/*!**********************!*\\\\
+  !*** ./src/panel.js ***!
+  \\\\**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+\\"use strict\\";
+eval(\\"__webpack_require__.r(__webpack_exports__);\\\\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \\\\\\"./src/style.css\\\\\\");\\\\n\\\\r\\\\n\\\\r\\\\nclass Panel extends HTMLElement {\\\\r\\\\n    constructor() {\\\\r\\\\n        super();\\\\r\\\\n\\\\r\\\\n        this.attachShadow({mode: \\\\\\"open\\\\\\"});\\\\r\\\\n        this.shadowRoot.innerHTML = \`<div class=\\\\\\"panel\\\\\\">Panel CMP</div>\`;\\\\r\\\\n        this.shadowRoot.adoptedStyleSheets = [_style_css__WEBPACK_IMPORTED_MODULE_0__[\\\\\\"default\\\\\\"]]\\\\r\\\\n    }\\\\r\\\\n}\\\\r\\\\n\\\\r\\\\nif (customElements.get('ata-panel') == null) {\\\\r\\\\n    customElements.define('ata-panel', Panel);\\\\r\\\\n}\\\\r\\\\n\\\\n\\\\n//# sourceURL=webpack:///./src/panel.js?\\");
+
+/***/ }),
+
+/***/ \\"./src/style.css\\":
+/*!***********************!*\\\\
+  !*** ./src/style.css ***!
+  \\\\***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+\\"use strict\\";
+eval(\\"__webpack_require__.r(__webpack_exports__);\\\\nconst styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`.white-listed {\\\\r\\\\n    background-color: white;\\\\r\\\\n}\\\\r\\\\n\`); /* harmony default export */ __webpack_exports__[\\\\\\"default\\\\\\"] = (styleSheet);\\\\n\\\\n//# sourceURL=webpack:///./src/style.css?\\");
 
 /***/ })
 

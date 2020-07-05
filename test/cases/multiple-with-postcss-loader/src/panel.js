@@ -6,10 +6,10 @@ class Panel extends HTMLElement {
 
         this.attachShadow({mode: "open"});
         this.shadowRoot.innerHTML = `<div class="panel">Panel CMP</div>`;
-        this.shadowRoot.adoptedStyleSheets = [style];
+        this.shadowRoot.adoptedStyleSheets = [style]
     }
 }
 
-if (customElements.get('ata-panel') == null) {
-    customElements.define('ata-panel', Panel);
+if (customElements.get('ata-form') == null) {
+    customElements.define('ata-form', Panel);
 }
