@@ -49,7 +49,8 @@ describe("Webpack integration", () => {
                }
             });
 
-            let webpackModule = await readFileOrEmpty(path.resolve(outputDirectory, 'unit_test.js'));
+            let webpackModule = (await readFileOrEmpty(path.resolve(outputDirectory, 'unit_test.js')))
+                .replace(/(?:\\[rn])+/g, "\n");
 
             expect(webpackModule).toMatchSnapshot(testCase);
         });
