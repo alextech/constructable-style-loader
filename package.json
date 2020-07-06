@@ -1,6 +1,6 @@
 {
   "name": "constructable-style-loader",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.2",
   "description": "Loading only needed selectors of a given CSS library into web component as a constructable stylesheet.",
   "license": "ISC",
   "author": "Alexander Romanenko",
@@ -27,12 +27,12 @@
     "webpack": "^4.43.0"
   },
   "optionalDependencies": {
-    "purgecss": "^2.2.1"
+    "purgecss": "^2.2.1",
+    "postcss-loader": "^3.0.0"
   },
   "peerDependencies": {
     "webpack": "*"
   },
   "dependencies": {
-    "postcss-loader": "^3.0.0"
   }
 }
