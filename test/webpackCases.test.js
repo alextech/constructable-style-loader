@@ -27,7 +27,8 @@ async function readFileOrEmpty(path/*: string*/) /*: Promise<string>*/ {
 const cases = [
     'simple',
     'simple-with-purge',
-    'multiple-with-postcss-loader'
+    'multiple-with-postcss-loader',
+    'edgecase-comment-has-backtick'
 ];
 
 describe("Webpack integration", () => {

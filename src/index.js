@@ -35,5 +35,7 @@ module.exports = async function (request, map, meta) {
         }
     }
 
+    request = request.replace(/`/g, '``');
+
     return `const styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`${request}\`); export default styleSheet;`;
 }
