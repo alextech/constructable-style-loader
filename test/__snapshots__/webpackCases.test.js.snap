@@ -65,7 +65,7 @@ const styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`.btn {
  * Discovered when adding tailwind
  */
 /**
- * Render the \`\`main\`\` element consistently in IE.
+ * Render the \\\\\\\\\`main\\\\\\\\\` element consistently in IE.
  */
 \`); /* harmony default export */ __webpack_exports__[\\\\\\"default\\\\\\"] = (styleSheet);
 //# sourceURL=webpack:///./src/style.css?\\");
