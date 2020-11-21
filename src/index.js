@@ -12,7 +12,7 @@ module.exports = async function (request, map, meta) {
         }
 
         const purgeCSS = new PurgeCSS.PurgeCSS();
-        purgeCSS.options = options;
+        purgeCSS.options.safelist = PurgeCSS.standardizeSafelist(options.safelist);
 
         const { content, extractors } = options;
 
