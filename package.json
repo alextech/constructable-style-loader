@@ -1,6 +1,6 @@
 {
   "name": "constructable-style-loader",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "description": "Loading only needed selectors of a given CSS library into web component as a constructable stylesheet.",
   "license": "ISC",
   "author": "Alexander Romanenko",

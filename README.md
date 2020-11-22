@@ -4,7 +4,8 @@ Apply CSS directly to a DOM element as a [`constructable stylesheet`](https://de
 Constructable-style-loader creates `CSSStyleSheetObject` JavaScript object, which can be adopted to an element using `adoptedStyleSheets` setter.
 
 It can be optionally chained with `postcss-loader` when need to use output from other CSS preprocessors.
-If used with `postcss-loader`, then also consider `postcss-discard-comments` plugin to delete unnecessary comments that would bloat the bundle.
+If used with `postcss-loader`, then also consider `postcss-discard-comments` plugin to delete unnecessary comments 
+that would bloat the bundle and potentially have invalid characters that can break the parser.
 
 ## Getting Started
 
