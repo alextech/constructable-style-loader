@@ -10,3 +10,7 @@
 .white-listed {
     background-color: white;
 }
+
+.\32xl\:ring-offset-white {
+    --tw-ring-offset-color: #fff;
+}

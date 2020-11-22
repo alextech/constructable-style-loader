@@ -231,6 +231,9 @@ const styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`.btn {
 .white-listed {
     background-color: white;
 }
+.\\\\\\\\\\\\\\\\32xl\\\\\\\\:ring-offset-white {
+    --tw-ring-offset-color: #fff;
+}
 \`); /* harmony default export */ __webpack_exports__[\\\\\\"default\\\\\\"] = (styleSheet);
 //# sourceURL=webpack:///./src/style.css?\\");
 
