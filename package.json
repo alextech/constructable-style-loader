@@ -1,7 +1,11 @@
 {
   "name": "constructable-style-loader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alextech/constructable-style-loader"
+  },
   "version": "1.0.0-alpha.7",
-  "description": "Loading only needed selectors of a given CSS library into web component as a constructable stylesheet.",
+  "description": "Loading CSS source as constructable stylesheet. Especially useful for web components.",
   "license": "ISC",
   "author": "Alexander Romanenko",
   "main": "src/index.js",
