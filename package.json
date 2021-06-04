@@ -29,7 +29,7 @@
     "memfs": "^3.2.0",
     "rimraf": "^3.0.2",
     "webpack": "^4.43.0",
-    "postcss": "^8.1.9",
+    "postcss": "^8.2.10",
     "purgecss": "^3.0.0",
     "postcss-loader": "^4.1.0"
   },
