@@ -1,20 +1,22 @@
 const loaderUtils = require('loader-utils');
 
 module.exports = async function (request, map, meta) {
-    const options = loaderUtils.getOptions(this);
+    const options = loaderUtils.getOptions(this) ?? {
+        purge: false
+    };
 
-    if (options != null && options.hasOwnProperty("purge") && options.purge === true) {
+    if (options.hasOwnProperty("purge") && options.purge === true) {
         const PurgeCSS = require('purgecss');
 
-        const options = {
+        const purgeOptions = {
             ...PurgeCSS.defaultOptions,
-            ...loaderUtils.getOptions(this),
+            ...options,
         }
 
         const purgeCSS = new PurgeCSS.PurgeCSS();
-        purgeCSS.options.safelist = PurgeCSS.standardizeSafelist(options.safelist);
+        purgeCSS.options.safelist = PurgeCSS.standardizeSafelist(purgeOptions.safelist);
 
-        const { content, extractors } = options;
+        const { content, extractors } = purgeOptions;
 
         const fileFormatContents = content.filter(
             (o) => typeof o === "string"
