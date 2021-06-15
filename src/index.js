@@ -12,7 +12,7 @@ module.exports = async function (request, map, meta) {
         }
 
         const purgeCSS = new PurgeCSS.PurgeCSS();
-        purgeCSS.options = options;
+        purgeCSS.options.safelist = PurgeCSS.standardizeSafelist(options.safelist);
 
         const { content, extractors } = options;
 
@@ -36,6 +36,7 @@ module.exports = async function (request, map, meta) {
     }
 
     request = request.replace(/`/g, '\\`');
+    request = request.replace(/\\+?(?=[1-9])/g, '\\\\');
 
     return `const styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`${request}\`); export default styleSheet;`;
 }

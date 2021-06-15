@@ -35,7 +35,7 @@ module.exports = {
                         loader: 'constructable-style-loader',
                         options: {
                             purge: true,
-                            whitelist: ['white-listed']
+                            safelist: ['white-listed']
                         }
                     }
                 ]
