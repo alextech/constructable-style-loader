@@ -3,7 +3,7 @@ const loaderUtils = require('loader-utils');
 module.exports = async function (request, map, meta) {
     const options = loaderUtils.getOptions(this);
 
-    if (options.hasOwnProperty("purge") && options.purge === true) {
+    if (options != null && options.hasOwnProperty("purge") && options.purge === true) {
         const PurgeCSS = require('purgecss');
 
         const options = {
