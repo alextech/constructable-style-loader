@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
+    devtool: false,
     entry: {
         unit_test: path.resolve(__dirname, 'src/index.js'),
     },

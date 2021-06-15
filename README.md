@@ -88,7 +88,7 @@ module.exports = {
 };
 ```
 
-If `constructable-style-loader` is chained after `purgecss-loader`, in this case purgecss will be given AST root from PostCSS
+If `constructable-style-loader` is chained after `post-loader`, purgecss will be given AST root from PostCSS
 to avoid duplicate parsing of CSS string.
 
 ### Note about performance
