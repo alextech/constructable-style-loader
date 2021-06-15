@@ -14,3 +14,7 @@
 form {
     padding-left: 10em;
 }
+
+.should-be-purged {
+    background-color: red;
+}

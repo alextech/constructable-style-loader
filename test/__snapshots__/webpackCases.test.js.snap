@@ -226,6 +226,10 @@ const styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`.btn {
 .white-listed {
     background-color: white;
 }
+
+.\\\\\\\\32xl\\\\:ring-offset-white {
+    --tw-ring-offset-color: #fff;
+}
 \`); /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styleSheet);
 
 /***/ }),
@@ -295,7 +299,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   \\"default\\": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`
+const styleSheet = new CSSStyleSheet(); styleSheet.replaceSync(\`.panel {
+    background-color: orange;
+    border-style: solid;
+}
+
+.white-listed {
+    background-color: white;
+}
 \`); /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styleSheet);
 
 /***/ }),

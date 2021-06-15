@@ -30,6 +30,8 @@ module.exports = {
                     {
                         loader: 'constructable-style-loader',
                         options: {
+                            purge: true,
+                            content: ['**/*.js'],
                             whitelist: ['white-listed']
                         }
                     },
